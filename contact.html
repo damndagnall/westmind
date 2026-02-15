@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <title>Contact | WestMind Psychology</title>
+  <meta name="description" content="Contact WestMind Psychology in Perth. Enquire or book in-person sessions or telehealth Australia-wide.">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="t1">WestMind Psychology</div>
+          <div class="t2">Perth, WA • Telehealth Australia-wide</div>
+        </div>
+      </a>
+
+      <div class="navlinks">
+        <a data-nav href="services.html">Services</a>
+        <a data-nav href="specialties.html">Specialties</a>
+        <a data-nav href="telehealth.html">Telehealth</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="contact.html" class="cta">Book / Enquire</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+    <h1>Book / Enquire</h1>
+    <p class="lede">Send a short message and we’ll reply with availability and next steps.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid2">
+      <div class="panel" style="padding:22px">
+        <h2 style="margin:0 0 10px">Enquiry form</h2>
+        <p class="small" style="margin-bottom:14px">
+          This is a <strong>static</strong> site for Cloudflare Pages. The form below uses an email draft (“mailto”) by default.
+          For a proper free form handler, connect to a service (e.g., Formspree) or a Cloudflare Worker endpoint.
+        </p>
+
+        <form class="form" id="contactForm">
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" autocomplete="tel" placeholder="Mobile number">
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+            <div>
+              <label for="type">Appointment type</label>
+              <select id="type" name="type">
+                <option>In-person (Perth)</option>
+                <option>Telehealth (video)</option>
+                <option>Phone</option>
+                <option>Either</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" placeholder="Briefly: what you’d like support with + preferred days/times." required></textarea>
+          </div>
+
+          <button class="btn primary" type="submit">Create email enquiry</button>
+          <div class="note">This opens your email client with the message pre-filled.</div>
+        </form>
+      </div>
+
+      <div class="panel" style="padding:22px">
+        <h2 style="margin:0 0 10px">Contact details</h2>
+        <div class="card">
+          <h3>Perth, Western Australia</h3>
+          <p>Private practice + telehealth Australia-wide.</p>
+          <p class="small" style="margin-top:10px">
+            <strong style="color:var(--text)">Email:</strong> hello@westmindpsychology.com.au<br>
+            <strong style="color:var(--text)">Phone:</strong> (08) 0000 0000
+          </p>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn" href="mailto:hello@westmindpsychology.com.au">Email</a>
+            <a class="btn" href="tel:+61800000000">Call</a>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:12px">
+          <strong style="color:var(--text); font-weight:700;">Add booking:</strong>
+          If you use Halaxy / HotDoc / Cliniko / Calendly, add the booking link here and in the top-right button.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const type = document.getElementById('type').value;
+      const msg = document.getElementById('msg').value.trim();
+
+      const to = 'hello@westmindpsychology.com.au';
+      const subject = encodeURIComponent('WestMind enquiry — ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + (phone || '-') + '\n' +
+        'Preferred: ' + type + '\n\n' +
+        msg + '\n\n' +
+        'Sent from westmindpsychology.com.au'
+      );
+      window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+    });
+  })();
+</script>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>© <span id="year"></span> WestMind Psychology • Western Australia</div>
+      <div>
+        <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="notice" style="margin-top:12px">
+      <strong style="color:var(--text); font-weight:700;">Important:</strong>
+      This website provides general information only and is not a substitute for professional advice.
+      If you are in immediate danger, call <strong style="color:var(--text); font-weight:700;">000</strong>.
+      For urgent support, Lifeline: <strong style="color:var(--text); font-weight:700;">13 11 14</strong>.
+    </div>
+  </div>
+  <script src="assets/site.js"></script>
+</footer>
+
+</body>
+</html>
