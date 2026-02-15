@@ -164,6 +164,36 @@
             box-shadow: 0 5px 15px rgba(199, 125, 92, 0.3);
         }
 
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: #C77D5C;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
         /* Hero Section */
         .hero {
             position: relative;
@@ -787,56 +817,56 @@
 
         /* Mobile styles */
         @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
             nav {
-                flex-direction: column;
+                flex-wrap: nowrap;
                 align-items: center;
-                gap: 1.5rem;
+                justify-content: space-between;
             }
 
             .nav-links {
+                position: fixed;
+                top: 90px;
+                left: 0;
+                right: 0;
+                background: white;
                 flex-direction: column;
-                gap: 1rem;
-                align-items: center;
-                width: 100%;
-                text-align: center;
+                gap: 0;
+                padding: 0;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                max-height: 400px;
             }
 
             .nav-links li {
                 width: 100%;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
             }
 
             .nav-links a {
                 display: block;
-                padding: 0.5rem;
+                padding: 1rem 2rem;
+                width: 100%;
+                text-align: left;
+            }
+
+            .nav-links a:hover {
+                background: rgba(199, 125, 92, 0.05);
             }
 
             .btn-consult {
-                width: 100%;
-                max-width: 300px;
-                text-align: center;
-            }
-
-            .logo {
-                flex-direction: column;
-                gap: 0.5rem;
-                align-items: flex-start;
-            }
-
-            .brain-logo {
-                width: 50px;
-                height: 50px;
-            }
-
-            .logo-text-container {
-                gap: 0.05rem;
-            }
-
-            .logo-text {
-                font-size: 1.8rem;
-            }
-
-            .logo-subtitle {
-                font-size: 0.75rem;
+                margin: 1rem;
+                width: calc(100% - 2rem);
+                max-width: none;
             }
 
             header {
@@ -845,10 +875,6 @@
 
             nav {
                 padding: 0 1rem;
-            }
-
-            .logo {
-                margin-bottom: 0.5rem;
             }
 
             .hero {
@@ -981,6 +1007,13 @@
                     <span class="logo-subtitle">Psychology</span>
                 </div>
             </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
@@ -1377,7 +1410,7 @@
             <p>Reaching out is a courageous first step. I'm here to provide a secure and reflective space where you can explore, understand, and grow.</p>
             
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
-                <a href="mailto:contact@westmindpsychology.com.au" class="btn btn-primary">Email Me</a>
+                <a href="/cdn-cgi/l/email-protection#4d2e2223392c2e390d3a283e39202423293d3e342e252221222a34632e2220632c38" class="btn btn-primary">Email Me</a>
                 <a href="https://calendly.com/contact-westmindpsychology/30min" class="btn btn-primary" target="_blank">Book Free Consult</a>
             </div>
             
@@ -1390,7 +1423,7 @@
                         </svg>
                         <span>Email</span>
                     </h3>
-                    <a href="mailto:contact@westmindpsychology.com.au">contact@westmindpsychology.com.au</a>
+                    <a href="/cdn-cgi/l/email-protection#02616d6c7663617642756771766f6b6c6672717b616a6d6e6d657b2c616d6f2c6377"><span class="__cf_email__" data-cfemail="177478796376746357607264637a7e797367646e747f787b78706e3974787a397662">[email&#160;protected]</span></a>
                 </div>
                 
                 <div class="contact-item">
@@ -1443,7 +1476,7 @@
     </footer>
 
     <!-- Calendly badge widget begin -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
     <script type="text/javascript">
         (function() {
             if (typeof Calendly !== 'undefined') {
@@ -1474,7 +1507,38 @@
 
                 function updateArrows() {
                     const scrollLeft = servicesGrid.scrollLeft;
-                    const maxScroll = servicesGrid.scrollWidth - servicesGrid.clientWidth;
+                            const maxScroll = servicesGrid.scrollWidth - servicesGrid.clientWidth;
                     leftArrow.style.opacity = scrollLeft > 0 ? '1' : '0.3';
                     leftArrow.style.pointerEvents = scrollLeft > 0 ? 'auto' : 'none';
-                    rightArrow.style.opacity = scrollLeft < maxScroll - 10 ? '1' :
+                    rightArrow.style.opacity = scrollLeft < maxScroll - 10 ? '1' : '0.3';
+                    rightArrow.style.pointerEvents = scrollLeft < maxScroll - 10 ? 'auto' : 'none';
+                }
+
+                servicesGrid.addEventListener('scroll', updateArrows);
+                updateArrows();
+            }
+
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+
+                // Close menu when clicking a link
+                const navLinkItems = navLinks.querySelectorAll('a');
+                navLinkItems.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        })();
+    </script>
+    <!-- Calendly badge widget end -->
+</body>
+</html>
