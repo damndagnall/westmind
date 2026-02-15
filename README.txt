@@ -35,3 +35,23 @@ This is a static site.
 - Taine Hall registration/credentials
 - Telehealth platform details
 - Specialties list
+
+
+## ✅ Contact form (works on Cloudflare Pages)
+This project includes a **Cloudflare Pages Function** at:
+- POST /api/contact  (file: functions/api/contact.js)
+
+### Set environment variables in Cloudflare Pages
+Cloudflare Dashboard → Workers & Pages → Pages → (your project) → Settings → Environment variables:
+- CONTACT_TO = your inbox email (e.g., hello@westmindpsychology.com.au)
+- CONTACT_FROM = a sender on your domain (e.g., no-reply@westmindpsychology.com.au)
+
+### MailChannels DNS auth (required)
+To send mail via MailChannels from your domain, add this DNS record in Cloudflare DNS:
+- Type: TXT
+- Name: _mailchannels
+- Content: v=mc1 cfid=<YOUR_CLOUDFLARE_ACCOUNT_ID>
+
+Also ensure your domain has SPF/DKIM/DMARC as appropriate for deliverability.
+If you prefer, I can swap this to Resend/SendGrid (API key) instead.
+
