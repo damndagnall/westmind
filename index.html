@@ -61,6 +61,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .logo {
@@ -69,6 +71,7 @@
             gap: 1rem;
             text-decoration: none;
             transition: transform 0.3s ease;
+            flex-shrink: 0;
         }
 
         .logo:hover {
@@ -109,6 +112,8 @@
             display: flex;
             gap: 2.5rem;
             list-style: none;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         .nav-links a {
@@ -118,6 +123,7 @@
             font-size: 0.95rem;
             position: relative;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
         .nav-links a::after {
@@ -702,12 +708,17 @@
 
         .contact-item h3 {
             font-size: 1.2rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             font-weight: 600;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+        }
+
+        .contact-item h3 svg {
+            margin-bottom: 0.25rem;
         }
 
         .contact-item a,
@@ -741,9 +752,74 @@
         }
 
         /* Responsive Design */
+        /* Tablet styles */
+        @media (max-width: 1100px) and (min-width: 769px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.2rem;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .btn-consult {
+                padding: 0.65rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .logo-text {
+                font-size: 2rem;
+            }
+
+            .brain-logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-subtitle {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Mobile styles */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+            }
+
+            .logo {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .brain-logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-text-container {
+                gap: 0.05rem;
+            }
+
+            .logo-text {
+                font-size: 1.8rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.75rem;
+            }
+
+            header {
+                padding: 1.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
             }
 
             .hero {
@@ -801,6 +877,35 @@
 
             .scroll-arrow {
                 display: none;
+            }
+        }
+
+        /* Very small mobile */
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.7rem;
+            }
+
+            .brain-logo {
+                width: 45px;
+                height: 45px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .service-card {
+                min-width: 260px;
+                max-width: 260px;
             }
         }
 
@@ -1140,7 +1245,7 @@
     <section id="about" class="about">
         <div class="about-container">
             <div class="about-image">
-                <img src="taine-hall.jpg" alt="Taine Hall, Clinical Psychologist">
+                <img src="taine-hall.jpg" alt="Taine Hall, Professional Psychologist">
             </div>
             <div class="about-content">
                 <h2>Meet Taine Hall</h2>
@@ -1151,7 +1256,7 @@
 <p>While his work is rooted in depth psychology, Taine integrates evidence-based modalities including CBT, DBT, Schema Therapy, Narrative Therapy, and Mindfulness practices, creating a tailored approach that honors your unique journey and needs.</p>
                 
                 <div class="credentials">
-                    <span class="credential">M.Psych (Clinical)</span>
+                    <span class="credential">M.Psych (Professional)</span>
                     <span class="credential">B.Psych (Hons)</span>
                     <span class="credential">AHPRA Registered</span>
                     <span class="credential">Medicare Provider</span>
@@ -1243,25 +1348,25 @@
             <p>Reaching out is a courageous first step. I'm here to provide a secure and reflective space where you can explore, understand, and grow.</p>
             
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
-                <a href="mailto:contact@westmindpsychology.com.au" class="btn btn-primary">Email Me</a>
+                <a href="/cdn-cgi/l/email-protection#f1929e9f85909285b1869482859c989f9581828892999e9d9e9688df929e9cdf9084" class="btn btn-primary">Email Me</a>
                 <a href="https://calendly.com/contact-westmindpsychology/30min" class="btn btn-primary" target="_blank">Book Free Consult</a>
             </div>
             
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
                             <rect x="15" y="25" width="70" height="50" rx="5" fill="none" stroke="white" stroke-width="4"/>
                             <path d="M 15 25 L 50 55 L 85 25" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span>Email</span>
                     </h3>
-                    <a href="mailto:contact@westmindpsychology.com.au">contact@westmindpsychology.com.au</a>
+                    <a href="/cdn-cgi/l/email-protection#b9dad6d7cdd8dacdf9cedccacdd4d0d7ddc9cac0dad1d6d5d6dec097dad6d497d8cc"><span class="__cf_email__" data-cfemail="43202c2d3722203703342630372e2a2d2733303a202b2c2f2c243a6d202c2e6d2236">[email&#160;protected]</span></a>
                 </div>
                 
                 <div class="contact-item">
                     <h3>
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
                             <path d="M 30 25 Q 28 23 26 25 L 20 31 Q 18 33 20 35 L 25 40 Q 35 50 45 60 L 50 65 Q 52 67 54 65 L 60 59 Q 62 57 60 55 L 58 53 Q 65 60 70 55 Q 72 53 70 51 L 50 31 Q 48 29 46 31 L 40 37 Q 38 39 36 37 L 32 33 Q 30 31 32 29 Z" fill="white"/>
                             <path d="M 65 70 Q 70 75 75 70" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
                         </svg>
@@ -1272,7 +1377,7 @@
                 
                 <div class="contact-item">
                     <h3>
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
                             <path d="M 50 20 Q 35 20 27.5 32.5 Q 20 45 20 55 Q 20 70 50 90 Q 80 70 80 55 Q 80 45 72.5 32.5 Q 65 20 50 20 Z" fill="white"/>
                             <circle cx="50" cy="45" r="12" fill="#C77D5C"/>
                         </svg>
@@ -1283,7 +1388,7 @@
                 
                 <div class="contact-item">
                     <h3>
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
                             <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="4"/>
                             <circle cx="50" cy="50" r="3" fill="white"/>
                             <!-- Hour hand -->
@@ -1298,18 +1403,18 @@
                         </svg>
                         <span>Hours</span>
                     </h3>
-                    <p>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: By appointment</p>
+                    <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Westmind Psychology & Counselling. All rights reserved. | Taine Hall, Clinical Psychologist</p>
+        <p>&copy; 2026 Westmind Psychology & Counselling. All rights reserved. | Taine Hall, Professional Psychologist</p>
     </footer>
 
     <!-- Calendly badge widget begin -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
     <script type="text/javascript">
         (function() {
             if (typeof Calendly !== 'undefined') {
@@ -1343,15 +1448,4 @@
                     const maxScroll = servicesGrid.scrollWidth - servicesGrid.clientWidth;
                     leftArrow.style.opacity = scrollLeft > 0 ? '1' : '0.3';
                     leftArrow.style.pointerEvents = scrollLeft > 0 ? 'auto' : 'none';
-                    rightArrow.style.opacity = scrollLeft < maxScroll - 10 ? '1' : '0.3';
-                    rightArrow.style.pointerEvents = scrollLeft < maxScroll - 10 ? 'auto' : 'none';
-                }
-
-                servicesGrid.addEventListener('scroll', updateArrows);
-                updateArrows();
-            }
-        })();
-    </script>
-    <!-- Calendly badge widget end -->
-</body>
-</html>
+                    rightArrow.style.opacity = scrollLeft < maxScroll - 10 ? '1' :
