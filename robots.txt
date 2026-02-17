@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://westmindpsychology.com.au/sitemap.xml
