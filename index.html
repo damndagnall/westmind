@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Westmind Psychology | Psychologist in Perth | Taine Hall</title>
-    <meta name="description" content="Westmind Psychology offers compassionate, evidence-based therapy in Perth, WA. Psychologist Taine Hall specialises in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available. Book online today.">
-    <meta name="keywords" content="psychologist Perth, psychology Perth, therapist Perth, counselling Perth, anxiety psychologist, depression therapy, addiction recovery Perth, CBT Perth, DBT Perth, telehealth psychologist, Medicare psychologist Perth, Taine Hall psychologist, mental health Perth, Westmind Psychology">
+    <title>Westmind Psychology | Psychologist in Alfred Cove | Taine Hall</title>
+    <meta name="description" content="Westmind Psychology offers compassionate, evidence-based therapy in Alfred Cove, WA. Psychologist Taine Hall specialises in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available. Book online today.">
+    <meta name="keywords" content="psychologist Alfred Cove, psychologist Perth, psychology Perth, therapist Perth, counselling Perth, anxiety psychologist, depression therapy, addiction recovery Perth, CBT Perth, DBT Perth, telehealth psychologist, Medicare psychologist Perth, Taine Hall psychologist, mental health Perth, Westmind Psychology">
     <meta name="author" content="Taine Hall - Westmind Psychology">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -14,19 +14,19 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://westmindpsychology.com.au">
-    <meta property="og:title" content="Westmind Psychology | Psychologist in Perth | Taine Hall">
-    <meta property="og:description" content="Compassionate, evidence-based therapy in Perth. Taine Hall specialises in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available.">
+    <meta property="og:title" content="Westmind Psychology | Psychologist in Alfred Cove | Taine Hall">
+    <meta property="og:description" content="Compassionate, evidence-based therapy in Alfred Cove, WA. Taine Hall specialises in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available.">
     <meta property="og:site_name" content="Westmind Psychology">
     <meta property="og:locale" content="en_AU">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Westmind Psychology | Psychologist in Perth | Taine Hall">
-    <meta name="twitter:description" content="Compassionate, evidence-based therapy in Perth. Specialising in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available.">
+    <meta name="twitter:title" content="Westmind Psychology | Psychologist in Alfred Cove | Taine Hall">
+    <meta name="twitter:description" content="Compassionate, evidence-based therapy in Alfred Cove, WA. Specialising in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available.">
 
     <!-- Geo tags for local SEO -->
     <meta name="geo.region" content="AU-WA">
-    <meta name="geo.placename" content="Perth">
+    <meta name="geo.placename" content="Alfred Cove">
     <meta name="geo.position" content="-31.9505;115.8605">
     <meta name="ICBM" content="-31.9505, 115.8605">
 
@@ -36,13 +36,13 @@
         "@context": "https://schema.org",
         "@type": "Psychologist",
         "name": "Westmind Psychology",
-        "description": "Compassionate, evidence-based psychology and counselling services in Perth, Western Australia. Specialising in anxiety, depression, addiction recovery, and relational challenges.",
+        "description": "Compassionate, evidence-based psychology and counselling services in Alfred Cove, Western Australia. Specialising in anxiety, depression, addiction recovery, and relational challenges.",
         "url": "https://westmindpsychology.com.au",
         "telephone": "",
         "email": "contact@westmindpsychology.com.au",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Perth",
+            "addressLocality": "Alfred Cove",
             "addressRegion": "WA",
             "addressCountry": "AU"
         },
@@ -51,7 +51,7 @@
             "latitude": -31.9505,
             "longitude": 115.8605
         },
-        "openingHours": "Mo-Fr 09:00-18:00",
+        "openingHours": "We 09:00-18:00",
         "priceRange": "$$",
         "paymentAccepted": "Medicare, Private Health Insurance, Credit Card, EFTPOS",
         "currenciesAccepted": "AUD",
@@ -692,6 +692,65 @@
             font-size: 0.95rem;
         }
 
+        /* Conditions Section */
+        .conditions {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .conditions-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+
+        .condition-tag {
+            background: white;
+            border: 2px solid rgba(199, 125, 92, 0.15);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .condition-tag:hover {
+            border-color: #C77D5C;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(199, 125, 92, 0.12);
+        }
+
+        .condition-dot {
+            width: 10px;
+            height: 10px;
+            min-width: 10px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #C77D5C, #E89B7E);
+        }
+
+        .condition-tag span {
+            font-size: 0.975rem;
+            color: var(--charcoal);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .condition-tag.featured {
+            border-color: rgba(95, 111, 88, 0.3);
+            background: rgba(95, 111, 88, 0.04);
+        }
+
+        .condition-tag.featured .condition-dot {
+            background: linear-gradient(135deg, #5F6F58, #8B9D83);
+        }
+
         /* About Section */
         .about {
             padding: 6rem 2rem;
@@ -1194,6 +1253,7 @@
             
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
+                <li><a href="#conditions">Conditions</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#booking">Book Now</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1207,213 +1267,214 @@
         <div class="hero-background">
             <svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
                 <defs>
-                    <filter id="paintBlur" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="14" />
+
+                    <!-- Gentle motion blur — horizontal camera pan, less extreme -->
+                    <filter id="motionBlur" x="-20%" y="-10%" width="140%" height="120%">
+                        <feGaussianBlur stdDeviation="18 4"/>
                     </filter>
-                    <filter id="softEdge" x="-10%" y="-10%" width="120%" height="120%">
-                        <feGaussianBlur stdDeviation="6" />
+
+                    <!-- Soft petal edge blur — gentle, not dissolving -->
+                    <filter id="petalSoft" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="8"/>
                     </filter>
-                    <filter id="brushWarp" x="-5%" y="-5%" width="110%" height="110%">
-                        <feTurbulence type="turbulence" baseFrequency="0.012" numOctaves="3" seed="5" result="turb"/>
-                        <feDisplacementMap in="SourceGraphic" in2="turb" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+
+                    <!-- Crisp centre — minimal blur for the flower cores -->
+                    <filter id="centreSharp" x="-10%" y="-10%" width="120%" height="120%">
+                        <feGaussianBlur stdDeviation="3"/>
                     </filter>
-                    <filter id="grain">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch" result="noise"/>
-                        <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
-                        <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply" result="blended"/>
-                        <feComponentTransfer in="blended">
-                            <feFuncA type="linear" slope="0.25"/>
+
+                    <!-- Stem streak — directional, elongated -->
+                    <filter id="stemStreak" x="-40%" y="-5%" width="180%" height="110%">
+                        <feGaussianBlur stdDeviation="30 2"/>
+                    </filter>
+
+                    <!-- Fine paper texture -->
+                    <filter id="paper">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.9 0.85" numOctaves="4" seed="8" stitchTiles="stitch" result="noise"/>
+                        <feColorMatrix type="saturate" values="0" in="noise" result="mono"/>
+                        <feBlend in="SourceGraphic" in2="mono" mode="multiply"/>
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.10"/>
                         </feComponentTransfer>
                     </filter>
+
+                    <!-- Gradients -->
+                    <linearGradient id="creamGround" x1="0" y1="0" x2="0.2" y2="1">
+                        <stop offset="0%" stop-color="#F6F1E8"/>
+                        <stop offset="50%" stop-color="#EEE6D8"/>
+                        <stop offset="100%" stop-color="#E8DFD0"/>
+                    </linearGradient>
+
+                    <radialGradient id="vignette" cx="50%" cy="50%" r="72%">
+                        <stop offset="0%" stop-color="transparent"/>
+                        <stop offset="100%" stop-color="#D4C4B0" stop-opacity="0.30"/>
+                    </radialGradient>
+
                 </defs>
 
-                <!-- Warm base -->
-                <rect width="1200" height="700" fill="#F5F1E8"/>
+                <!-- ═══ GROUND ═══ -->
+                <rect width="1200" height="700" fill="url(#creamGround)"/>
 
-                <!-- Bold color field washes — breathing slowly -->
-                <ellipse cx="300" cy="250" rx="480" ry="320" fill="#8B9D83" opacity="0.2" filter="url(#paintBlur)">
-                    <animate attributeName="cx" values="300;360;300" dur="20s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.2;0.3;0.2" dur="10s" repeatCount="indefinite"/>
-                </ellipse>
-                <ellipse cx="950" cy="400" rx="400" ry="280" fill="#C77D5C" opacity="0.18" filter="url(#paintBlur)">
-                    <animate attributeName="cx" values="950;890;950" dur="22s" repeatCount="indefinite"/>
-                    <animate attributeName="cy" values="400;360;400" dur="18s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.18;0.28;0.18" dur="12s" repeatCount="indefinite"/>
-                </ellipse>
-                <ellipse cx="600" cy="80" rx="550" ry="180" fill="#5F6F58" opacity="0.12" filter="url(#paintBlur)">
-                    <animate attributeName="cy" values="80;120;80" dur="16s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.12;0.2;0.12" dur="14s" repeatCount="indefinite"/>
-                </ellipse>
+                <!-- ═══ STEMS — diagonal ribbons ═══ -->
+                <line x1="-60" y1="430" x2="1300" y2="530" stroke="#B8C8A0" stroke-width="14" opacity="0.40" filter="url(#stemStreak)"/>
+                <line x1="-60" y1="465" x2="1300" y2="555" stroke="#A8BA90" stroke-width="9" opacity="0.30" filter="url(#stemStreak)"/>
+                <line x1="0" y1="590" x2="860" y2="650" stroke="#B0C09A" stroke-width="8" opacity="0.22" filter="url(#stemStreak)"/>
 
-                <!-- Vivid gestural brushstrokes with displacement warp -->
-                <g filter="url(#brushWarp)">
-                    <!-- Bold terracotta sweep — upper canvas -->
-                    <path d="M 580 30 Q 720 -10 860 60 Q 1000 130 1100 50 Q 1160 10 1250 80" 
-                        fill="none" stroke="#C77D5C" stroke-width="38" stroke-linecap="round" opacity="0.3">
-                        <animate attributeName="d" 
-                            values="M 580 30 Q 720 -10 860 60 Q 1000 130 1100 50 Q 1160 10 1250 80;
-                                    M 600 50 Q 740 10 880 80 Q 980 150 1080 70 Q 1140 30 1230 100;
-                                    M 560 20 Q 700 -20 840 50 Q 1010 120 1110 40 Q 1170 0 1260 70;
-                                    M 580 30 Q 720 -10 860 60 Q 1000 130 1100 50 Q 1160 10 1250 80" 
-                            dur="12s" repeatCount="indefinite"/>
-                    </path>
-
-                    <!-- Deep sage arc — mid canvas, left to right -->
-                    <path d="M -80 320 Q 120 240 350 290 Q 580 340 720 260 Q 860 180 1050 270" 
-                        fill="none" stroke="#5F6F58" stroke-width="32" stroke-linecap="round" opacity="0.25">
-                        <animate attributeName="d" 
-                            values="M -80 320 Q 120 240 350 290 Q 580 340 720 260 Q 860 180 1050 270;
-                                    M -60 340 Q 140 260 370 310 Q 560 360 700 280 Q 840 200 1030 290;
-                                    M -100 310 Q 100 230 330 280 Q 590 330 730 250 Q 870 170 1060 260;
-                                    M -80 320 Q 120 240 350 290 Q 580 340 720 260 Q 860 180 1050 270" 
-                            dur="15s" repeatCount="indefinite"/>
-                    </path>
-
-                    <!-- Sage green dramatic sweep — lower canvas -->
-                    <path d="M 50 580 Q 200 490 420 540 Q 640 590 850 480 Q 1000 390 1200 460" 
-                        fill="none" stroke="#8B9D83" stroke-width="28" stroke-linecap="round" opacity="0.28">
-                        <animate attributeName="d" 
-                            values="M 50 580 Q 200 490 420 540 Q 640 590 850 480 Q 1000 390 1200 460;
-                                    M 70 560 Q 220 470 440 520 Q 620 610 830 500 Q 980 410 1180 480;
-                                    M 30 590 Q 180 500 400 550 Q 650 580 860 470 Q 1010 380 1210 450;
-                                    M 50 580 Q 200 490 420 540 Q 640 590 850 480 Q 1000 390 1200 460" 
-                            dur="14s" repeatCount="indefinite"/>
-                    </path>
-
-                    <!-- Terracotta whip stroke — crossing diagonally -->
-                    <path d="M 100 650 Q 300 500 500 450 Q 700 400 900 200 Q 1000 100 1150 150" 
-                        fill="none" stroke="#C77D5C" stroke-width="18" stroke-linecap="round" opacity="0.2">
-                        <animate attributeName="d" 
-                            values="M 100 650 Q 300 500 500 450 Q 700 400 900 200 Q 1000 100 1150 150;
-                                    M 120 640 Q 320 490 520 440 Q 680 410 880 220 Q 980 120 1130 170;
-                                    M 80 660 Q 280 510 480 460 Q 710 390 910 190 Q 1010 90 1160 140;
-                                    M 100 650 Q 300 500 500 450 Q 700 400 900 200 Q 1000 100 1150 150" 
-                            dur="18s" repeatCount="indefinite"/>
-                    </path>
-                </g>
-
-                <!-- Organic pooled forms — Frankenthaler soak stain -->
-                <path d="M 820 120 Q 900 60 980 100 Q 1060 140 1030 230 Q 1000 320 910 330 Q 820 340 790 270 Q 760 200 820 120 Z" 
-                    fill="#C77D5C" opacity="0.2" filter="url(#softEdge)">
-                    <animate attributeName="d" 
-                        values="M 820 120 Q 900 60 980 100 Q 1060 140 1030 230 Q 1000 320 910 330 Q 820 340 790 270 Q 760 200 820 120 Z;
-                                M 840 100 Q 920 40 1000 80 Q 1080 120 1050 210 Q 1020 300 930 310 Q 840 320 810 250 Q 780 180 840 100 Z;
-                                M 820 120 Q 900 60 980 100 Q 1060 140 1030 230 Q 1000 320 910 330 Q 820 340 790 270 Q 760 200 820 120 Z" 
-                        dur="11s" repeatCount="indefinite"/>
-                </path>
-
-                <path d="M 80 60 Q 180 0 280 50 Q 380 100 350 210 Q 320 320 220 330 Q 120 340 70 260 Q 20 180 80 60 Z" 
-                    fill="#8B9D83" opacity="0.22" filter="url(#softEdge)">
-                    <animate attributeName="d" 
-                        values="M 80 60 Q 180 0 280 50 Q 380 100 350 210 Q 320 320 220 330 Q 120 340 70 260 Q 20 180 80 60 Z;
-                                M 100 40 Q 200 -20 300 30 Q 400 80 370 190 Q 340 300 240 310 Q 140 320 90 240 Q 40 160 100 40 Z;
-                                M 80 60 Q 180 0 280 50 Q 380 100 350 210 Q 320 320 220 330 Q 120 340 70 260 Q 20 180 80 60 Z" 
-                        dur="13s" repeatCount="indefinite"/>
-                </path>
-
-                <!-- Deep pooled wash bottom-left -->
-                <path d="M -20 480 Q 100 390 240 440 Q 380 490 400 590 Q 420 690 300 710 Q 180 730 60 670 Q -60 610 -20 480 Z" 
-                    fill="#5F6F58" opacity="0.16" filter="url(#softEdge)">
-                    <animate attributeName="d" 
-                        values="M -20 480 Q 100 390 240 440 Q 380 490 400 590 Q 420 690 300 710 Q 180 730 60 670 Q -60 610 -20 480 Z;
-                                M 0 460 Q 120 370 260 420 Q 400 470 420 570 Q 440 670 320 690 Q 200 710 80 650 Q -40 590 0 460 Z;
-                                M -20 480 Q 100 390 240 440 Q 380 490 400 590 Q 420 690 300 710 Q 180 730 60 670 Q -60 610 -20 480 Z" 
-                        dur="16s" repeatCount="indefinite"/>
-                </path>
-
-                <!-- Hot bloom lower-right -->
-                <path d="M 980 520 Q 1080 450 1160 500 Q 1240 550 1210 650 Q 1180 750 1060 720 Q 940 690 920 620 Q 900 550 980 520 Z" 
-                    fill="#C77D5C" opacity="0.18" filter="url(#softEdge)">
-                    <animate attributeName="d" 
-                        values="M 980 520 Q 1080 450 1160 500 Q 1240 550 1210 650 Q 1180 750 1060 720 Q 940 690 920 620 Q 900 550 980 520 Z;
-                                M 1000 500 Q 1100 430 1180 480 Q 1260 530 1230 630 Q 1200 730 1080 700 Q 960 670 940 600 Q 920 530 1000 500 Z;
-                                M 980 520 Q 1080 450 1160 500 Q 1240 550 1210 650 Q 1180 750 1060 720 Q 940 690 920 620 Q 900 550 980 520 Z" 
-                        dur="14s" repeatCount="indefinite"/>
-                </path>
-
-                <!-- Energetic gestural scrawls — Twombly/fast marks -->
+                <!-- ═══════════════════════════════════════════
+                     FLOWER 1 — upper left, dominant
+                     Sways gently, petals slowly rotate
+                ════════════════════════════════════════════ -->
                 <g>
-                    <path d="M 460 160 Q 490 130 520 155 Q 550 180 580 148 Q 610 116 650 142 Q 680 168 710 138" 
-                        fill="none" stroke="#C77D5C" stroke-width="3.5" stroke-linecap="round" opacity="0.3">
-                        <animate attributeName="d"
-                            values="M 460 160 Q 490 130 520 155 Q 550 180 580 148 Q 610 116 650 142 Q 680 168 710 138;
-                                    M 470 150 Q 500 120 530 145 Q 560 170 590 138 Q 620 106 660 132 Q 690 158 720 128;
-                                    M 460 160 Q 490 130 520 155 Q 550 180 580 148 Q 610 116 650 142 Q 680 168 710 138" 
-                            dur="6s" repeatCount="indefinite"/>
-                    </path>
-                    <path d="M 700 420 Q 740 390 780 418 Q 820 446 860 410 Q 900 374 940 405" 
-                        fill="none" stroke="#8B9D83" stroke-width="3" stroke-linecap="round" opacity="0.28">
-                        <animate attributeName="d"
-                            values="M 700 420 Q 740 390 780 418 Q 820 446 860 410 Q 900 374 940 405;
-                                    M 710 410 Q 750 380 790 408 Q 830 436 870 400 Q 910 364 950 395;
-                                    M 700 420 Q 740 390 780 418 Q 820 446 860 410 Q 900 374 940 405" 
-                            dur="7s" repeatCount="indefinite"/>
-                    </path>
-                    <path d="M 150 360 Q 190 330 230 358 Q 270 386 310 350 Q 350 314 390 345 Q 430 376 470 340" 
-                        fill="none" stroke="#5F6F58" stroke-width="2.5" stroke-linecap="round" opacity="0.25">
-                        <animate attributeName="d"
-                            values="M 150 360 Q 190 330 230 358 Q 270 386 310 350 Q 350 314 390 345 Q 430 376 470 340;
-                                    M 160 350 Q 200 320 240 348 Q 280 376 320 340 Q 360 304 400 335 Q 440 366 480 330;
-                                    M 150 360 Q 190 330 230 358 Q 270 386 310 350 Q 350 314 390 345 Q 430 376 470 340" 
-                            dur="8s" repeatCount="indefinite"/>
-                    </path>
-                    <!-- Extra fast scrawl -->
-                    <path d="M 550 550 Q 590 520 630 548 Q 670 576 710 540 Q 750 504 790 535" 
-                        fill="none" stroke="#C77D5C" stroke-width="2" stroke-linecap="round" opacity="0.22">
-                        <animate attributeName="d"
-                            values="M 550 550 Q 590 520 630 548 Q 670 576 710 540 Q 750 504 790 535;
-                                    M 560 540 Q 600 510 640 538 Q 680 566 720 530 Q 760 494 800 525;
-                                    M 550 550 Q 590 520 630 548 Q 670 576 710 540 Q 750 504 790 535" 
-                            dur="5s" repeatCount="indefinite"/>
-                    </path>
+                    <!-- Whole flower sways on its stem -->
+                    <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 6,-4; 2,6; -5,-2; 0,0"
+                        dur="9s" repeatCount="indefinite" calcMode="spline"
+                        keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+                    <!-- Outer ambient glow -->
+                    <ellipse cx="300" cy="235" rx="200" ry="145" fill="#E0A870" opacity="0.25" filter="url(#motionBlur)"/>
+
+                    <!-- Petals — rotate slowly as a group around the centre -->
+                    <g>
+                        <animateTransform attributeName="transform" type="rotate"
+                            values="0 300 235; 4 300 235; -3 300 235; 1 300 235; 0 300 235"
+                            dur="12s" repeatCount="indefinite" calcMode="spline"
+                            keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+                        <ellipse cx="300" cy="130" rx="28" ry="72" fill="#E8A060" opacity="0.75" filter="url(#petalSoft)" transform="rotate(-8 300 235)"/>
+                        <ellipse cx="340" cy="135" rx="26" ry="68" fill="#E09858" opacity="0.70" filter="url(#petalSoft)" transform="rotate(12 300 235)"/>
+                        <ellipse cx="258" cy="138" rx="26" ry="68" fill="#E8A868" opacity="0.70" filter="url(#petalSoft)" transform="rotate(-28 300 235)"/>
+                        <ellipse cx="192" cy="220" rx="72" ry="26" fill="#E09858" opacity="0.72" filter="url(#petalSoft)" transform="rotate(-5 300 235)"/>
+                        <ellipse cx="408" cy="225" rx="72" ry="26" fill="#D89050" opacity="0.68" filter="url(#petalSoft)" transform="rotate(5 300 235)"/>
+                        <ellipse cx="196" cy="255" rx="70" ry="24" fill="#E8A068" opacity="0.65" filter="url(#petalSoft)" transform="rotate(18 300 235)"/>
+                        <ellipse cx="405" cy="250" rx="70" ry="24" fill="#D88A48" opacity="0.65" filter="url(#petalSoft)" transform="rotate(-18 300 235)"/>
+                        <ellipse cx="295" cy="342" rx="28" ry="70" fill="#D89058" opacity="0.68" filter="url(#petalSoft)" transform="rotate(5 300 235)"/>
+                        <ellipse cx="328" cy="335" rx="26" ry="66" fill="#E09860" opacity="0.65" filter="url(#petalSoft)" transform="rotate(22 300 235)"/>
+                        <ellipse cx="264" cy="338" rx="26" ry="66" fill="#E0A060" opacity="0.65" filter="url(#petalSoft)" transform="rotate(-16 300 235)"/>
+                        <ellipse cx="218" cy="158" rx="24" ry="66" fill="#E8A868" opacity="0.68" filter="url(#petalSoft)" transform="rotate(-48 300 235)"/>
+                        <ellipse cx="382" cy="155" rx="24" ry="66" fill="#D89050" opacity="0.65" filter="url(#petalSoft)" transform="rotate(48 300 235)"/>
+                        <ellipse cx="216" cy="312" rx="24" ry="64" fill="#D88A50" opacity="0.62" filter="url(#petalSoft)" transform="rotate(48 300 235)"/>
+                        <ellipse cx="382" cy="315" rx="24" ry="64" fill="#E09858" opacity="0.62" filter="url(#petalSoft)" transform="rotate(-48 300 235)"/>
+                    </g>
+
+                    <!-- Motion smear -->
+                    <ellipse cx="300" cy="232" rx="260" ry="65" fill="#D89858" opacity="0.22" filter="url(#motionBlur)"/>
+
+                    <!-- Centre disc — pulses gently -->
+                    <ellipse cx="300" cy="235" rx="52" ry="46" fill="#8A1A10" opacity="0.82" filter="url(#centreSharp)">
+                        <animate attributeName="rx" values="52;55;50;52" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+                        <animate attributeName="ry" values="46;49;44;46" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+                        <animate attributeName="opacity" values="0.82;0.92;0.78;0.82" dur="8s" repeatCount="indefinite"/>
+                    </ellipse>
+                    <ellipse cx="294" cy="228" rx="34" ry="30" fill="#C02820" opacity="0.70" filter="url(#centreSharp)">
+                        <animate attributeName="opacity" values="0.70;0.80;0.65;0.70" dur="8s" repeatCount="indefinite"/>
+                    </ellipse>
+                    <circle cx="296" cy="232" r="8" fill="#D03828" opacity="0.55" filter="url(#centreSharp)"/>
+                    <circle cx="308" cy="238" r="6" fill="#901810" opacity="0.60" filter="url(#centreSharp)"/>
+                    <circle cx="288" cy="240" r="5" fill="#A02018" opacity="0.55" filter="url(#centreSharp)"/>
                 </g>
 
-                <!-- Drip lines — expressive gravity, animated downward -->
-                <line x1="910" y1="100" x2="918" y2="340" stroke="#C77D5C" stroke-width="2" opacity="0.15" stroke-linecap="round">
-                    <animate attributeName="y2" values="100;340;340" dur="4s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0;0.15;0" dur="4s" repeatCount="indefinite"/>
-                </line>
-                <line x1="170" y1="250" x2="165" y2="500" stroke="#8B9D83" stroke-width="1.5" opacity="0.12" stroke-linecap="round">
-                    <animate attributeName="y2" values="250;500;500" dur="5s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0;0.12;0" dur="5s" repeatCount="indefinite"/>
-                </line>
-                <line x1="1060" y1="380" x2="1068" y2="620" stroke="#5F6F58" stroke-width="2" opacity="0.13" stroke-linecap="round">
-                    <animate attributeName="y2" values="380;620;620" dur="6s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0;0.13;0" dur="6s" repeatCount="indefinite"/>
-                </line>
-                <line x1="450" y1="60" x2="445" y2="260" stroke="#C77D5C" stroke-width="1" opacity="0.1" stroke-linecap="round">
-                    <animate attributeName="y2" values="60;260;260" dur="4.5s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0;0.1;0" dur="4.5s" repeatCount="indefinite"/>
-                </line>
 
-                <!-- Splatter dots — kinetic energy -->
-                <circle cx="760" cy="90" r="5" fill="#C77D5C" opacity="0">
-                    <animate attributeName="opacity" values="0;0.5;0" dur="3s" repeatCount="indefinite"/>
-                    <animate attributeName="r" values="3;8;3" dur="3s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="320" cy="200" r="4" fill="#5F6F58" opacity="0">
-                    <animate attributeName="opacity" values="0;0.45;0" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
-                    <animate attributeName="r" values="2;7;2" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
-                </circle>
-                <circle cx="1080" cy="300" r="4" fill="#8B9D83" opacity="0">
-                    <animate attributeName="opacity" values="0;0.4;0" dur="4s" repeatCount="indefinite" begin="1s"/>
-                    <animate attributeName="r" values="3;9;3" dur="4s" repeatCount="indefinite" begin="1s"/>
-                </circle>
-                <circle cx="600" cy="620" r="3" fill="#C77D5C" opacity="0">
-                    <animate attributeName="opacity" values="0;0.5;0" dur="2.8s" repeatCount="indefinite" begin="1.5s"/>
-                    <animate attributeName="r" values="2;6;2" dur="2.8s" repeatCount="indefinite" begin="1.5s"/>
-                </circle>
-                <circle cx="200" cy="500" r="4" fill="#8B9D83" opacity="0">
-                    <animate attributeName="opacity" values="0;0.35;0" dur="3.2s" repeatCount="indefinite" begin="0.8s"/>
-                    <animate attributeName="r" values="2;7;2" dur="3.2s" repeatCount="indefinite" begin="0.8s"/>
-                </circle>
-                <circle cx="880" cy="550" r="3" fill="#5F6F58" opacity="0">
-                    <animate attributeName="opacity" values="0;0.42;0" dur="3.8s" repeatCount="indefinite" begin="2s"/>
-                    <animate attributeName="r" values="2;8;2" dur="3.8s" repeatCount="indefinite" begin="2s"/>
-                </circle>
+                <!-- ═══════════════════════════════════════════
+                     FLOWER 2 — upper right, secondary
+                     Slower sway, slightly different phase
+                ════════════════════════════════════════════ -->
+                <g>
+                    <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -5,5; 4,-3; -2,7; 0,0"
+                        dur="11s" repeatCount="indefinite" calcMode="spline"
+                        keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
 
-                <!-- Canvas texture overlay -->
-                <rect width="1200" height="700" filter="url(#grain)" opacity="0.2"/>
+                    <ellipse cx="780" cy="195" rx="180" ry="130" fill="#D89860" opacity="0.22" filter="url(#motionBlur)"/>
+
+                    <g>
+                        <animateTransform attributeName="transform" type="rotate"
+                            values="0 780 195; -3 780 195; 5 780 195; -1 780 195; 0 780 195"
+                            dur="14s" repeatCount="indefinite" calcMode="spline"
+                            keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+                        <ellipse cx="780" cy="98" rx="25" ry="64" fill="#E09A60" opacity="0.72" filter="url(#petalSoft)" transform="rotate(-5 780 195)"/>
+                        <ellipse cx="816" cy="103" rx="23" ry="60" fill="#D88E55" opacity="0.68" filter="url(#petalSoft)" transform="rotate(14 780 195)"/>
+                        <ellipse cx="743" cy="106" rx="23" ry="60" fill="#E0A060" opacity="0.68" filter="url(#petalSoft)" transform="rotate(-24 780 195)"/>
+                        <ellipse cx="684" cy="178" rx="64" ry="23" fill="#D88E55" opacity="0.70" filter="url(#petalSoft)"/>
+                        <ellipse cx="876" cy="182" rx="64" ry="23" fill="#CC8448" opacity="0.65" filter="url(#petalSoft)"/>
+                        <ellipse cx="687" cy="206" rx="62" ry="21" fill="#D89258" opacity="0.62" filter="url(#petalSoft)" transform="rotate(15 780 195)"/>
+                        <ellipse cx="873" cy="210" rx="62" ry="21" fill="#C87C44" opacity="0.62" filter="url(#petalSoft)" transform="rotate(-15 780 195)"/>
+                        <ellipse cx="776" cy="293" rx="25" ry="62" fill="#D08848" opacity="0.65" filter="url(#petalSoft)" transform="rotate(4 780 195)"/>
+                        <ellipse cx="806" cy="287" rx="23" ry="58" fill="#D89050" opacity="0.62" filter="url(#petalSoft)" transform="rotate(20 780 195)"/>
+                        <ellipse cx="752" cy="290" rx="23" ry="58" fill="#D89858" opacity="0.62" filter="url(#petalSoft)" transform="rotate(-18 780 195)"/>
+                        <ellipse cx="706" cy="125" rx="22" ry="58" fill="#E09858" opacity="0.65" filter="url(#petalSoft)" transform="rotate(-46 780 195)"/>
+                        <ellipse cx="854" cy="124" rx="22" ry="58" fill="#CC8448" opacity="0.62" filter="url(#petalSoft)" transform="rotate(46 780 195)"/>
+                        <ellipse cx="704" cy="268" rx="21" ry="56" fill="#C88048" opacity="0.58" filter="url(#petalSoft)" transform="rotate(46 780 195)"/>
+                        <ellipse cx="854" cy="268" rx="21" ry="56" fill="#D08850" opacity="0.58" filter="url(#petalSoft)" transform="rotate(-46 780 195)"/>
+                    </g>
+
+                    <ellipse cx="780" cy="192" rx="230" ry="55" fill="#CC8848" opacity="0.18" filter="url(#motionBlur)"/>
+
+                    <ellipse cx="780" cy="195" rx="46" ry="40" fill="#7A1610" opacity="0.80" filter="url(#centreSharp)">
+                        <animate attributeName="rx" values="46;49;43;46" dur="10s" repeatCount="indefinite" begin="1s" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+                        <animate attributeName="ry" values="40;43;37;40" dur="10s" repeatCount="indefinite" begin="1s" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+                        <animate attributeName="opacity" values="0.80;0.90;0.75;0.80" dur="10s" repeatCount="indefinite" begin="1s"/>
+                    </ellipse>
+                    <ellipse cx="775" cy="189" rx="30" ry="26" fill="#B02218" opacity="0.68" filter="url(#centreSharp)">
+                        <animate attributeName="opacity" values="0.68;0.78;0.62;0.68" dur="10s" repeatCount="indefinite" begin="1s"/>
+                    </ellipse>
+                    <circle cx="778" cy="192" r="7" fill="#C02818" opacity="0.52" filter="url(#centreSharp)"/>
+                    <circle cx="788" cy="197" r="5" fill="#841410" opacity="0.58" filter="url(#centreSharp)"/>
+                </g>
+
+
+                <!-- ═══════════════════════════════════════════
+                     FLOWER 3 — lower left, partially cropped
+                     Slower, lazier movement
+                ════════════════════════════════════════════ -->
+                <g>
+                    <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 4,6; -6,2; 3,-5; 0,0"
+                        dur="13s" repeatCount="indefinite" calcMode="spline"
+                        keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+                    <ellipse cx="95" cy="570" rx="140" ry="110" fill="#D08858" opacity="0.28" filter="url(#motionBlur)"/>
+
+                    <g>
+                        <animateTransform attributeName="transform" type="rotate"
+                            values="0 95 570; 5 95 570; -2 95 570; 3 95 570; 0 95 570"
+                            dur="16s" repeatCount="indefinite" calcMode="spline"
+                            keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+                        <ellipse cx="95" cy="488" rx="22" ry="56" fill="#D89058" opacity="0.65" filter="url(#petalSoft)"/>
+                        <ellipse cx="126" cy="494" rx="20" ry="52" fill="#CC8448" opacity="0.60" filter="url(#petalSoft)" transform="rotate(18 95 570)"/>
+                        <ellipse cx="62" cy="496" rx="20" ry="52" fill="#D89860" opacity="0.60" filter="url(#petalSoft)" transform="rotate(-18 95 570)"/>
+                        <ellipse cx="10" cy="555" rx="56" ry="20" fill="#CC8448" opacity="0.62" filter="url(#petalSoft)"/>
+                        <ellipse cx="180" cy="558" rx="56" ry="20" fill="#C87A40" opacity="0.58" filter="url(#petalSoft)"/>
+                        <ellipse cx="32" cy="510" rx="19" ry="50" fill="#D08850" opacity="0.58" filter="url(#petalSoft)" transform="rotate(-42 95 570)"/>
+                        <ellipse cx="158" cy="510" rx="19" ry="50" fill="#C87844" opacity="0.55" filter="url(#petalSoft)" transform="rotate(42 95 570)"/>
+                    </g>
+
+                    <ellipse cx="95" cy="568" rx="190" ry="46" fill="#C88048" opacity="0.18" filter="url(#motionBlur)"/>
+
+                    <ellipse cx="95" cy="570" rx="42" ry="38" fill="#721410" opacity="0.78" filter="url(#centreSharp)">
+                        <animate attributeName="rx" values="42;45;39;42" dur="12s" repeatCount="indefinite" begin="2s" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+                        <animate attributeName="ry" values="38;41;35;38" dur="12s" repeatCount="indefinite" begin="2s" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+                        <animate attributeName="opacity" values="0.78;0.88;0.72;0.78" dur="12s" repeatCount="indefinite" begin="2s"/>
+                    </ellipse>
+                    <ellipse cx="90" cy="564" rx="26" ry="23" fill="#A82018" opacity="0.65" filter="url(#centreSharp)">
+                        <animate attributeName="opacity" values="0.65;0.75;0.60;0.65" dur="12s" repeatCount="indefinite" begin="2s"/>
+                    </ellipse>
+                    <circle cx="93" cy="568" r="6" fill="#B82418" opacity="0.50" filter="url(#centreSharp)"/>
+                </g>
+
+
+                <!-- ═══ AMBIENT LIGHT ═══ -->
+                <ellipse cx="1050" cy="160" rx="280" ry="200" fill="#F2EDE0" opacity="0.55" filter="url(#petalSoft)"/>
+                <ellipse cx="600" cy="380" rx="380" ry="220" fill="#F0EAE0" opacity="0.22" filter="url(#petalSoft)"/>
+
+                <!-- ═══ PAPER TEXTURE ═══ -->
+                <rect width="1200" height="700" filter="url(#paper)" opacity="1"/>
+
+                <!-- ═══ VIGNETTE ═══ -->
+                <rect width="1200" height="700" fill="url(#vignette)"/>
+
             </svg>
         </div>
         <div class="hero-content-wrapper">
@@ -1553,10 +1614,52 @@
         </div>
     </section>
 
+    <section id="conditions" class="conditions" aria-label="Conditions Treated">
+        <div class="conditions-container">
+            <h2 class="section-title">Areas I Work With</h2>
+            <p class="section-subtitle">I support adults navigating a wide range of psychological and emotional difficulties</p>
+
+            <div class="conditions-grid">
+                <div class="condition-tag">
+                    <div class="condition-dot"></div>
+                    <span>Anxiety &amp; Depression</span>
+                </div>
+                <div class="condition-tag">
+                    <div class="condition-dot"></div>
+                    <span>Interpersonal Difficulties</span>
+                </div>
+                <div class="condition-tag">
+                    <div class="condition-dot"></div>
+                    <span>Complex Trauma &amp; PTSD</span>
+                </div>
+                <div class="condition-tag">
+                    <div class="condition-dot"></div>
+                    <span>Personality Disorders</span>
+                </div>
+                <div class="condition-tag">
+                    <div class="condition-dot"></div>
+                    <span>Identity-Related Concerns</span>
+                </div>
+                <div class="condition-tag">
+                    <div class="condition-dot"></div>
+                    <span>Emotion Dysregulation</span>
+                </div>
+                <div class="condition-tag">
+                    <div class="condition-dot"></div>
+                    <span>OCD</span>
+                </div>
+                <div class="condition-tag featured">
+                    <div class="condition-dot"></div>
+                    <span>Adult ADHD Assessments</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="about" aria-label="About Taine Hall">
         <div class="about-container">
             <div class="about-image">
-                <img src="taine-hall.jpg" alt="Taine Hall - Registered Psychologist at Westmind Psychology in Perth, Western Australia" loading="lazy" width="600" height="600">
+                <img src="taine-hall.jpg" alt="Taine Hall - Registered Psychologist at Westmind Psychology in Alfred Cove, Western Australia" loading="lazy" width="600" height="600">
             </div>
             <div class="about-content">
                 <h2>Meet Taine Hall</h2>
@@ -1659,7 +1762,7 @@
             <p>Reaching out is a courageous first step. I'm here to provide a secure and reflective space where you can explore, understand, and grow.</p>
             
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
-                <a href="/cdn-cgi/l/email-protection#23404c4d5742405763544650574e4a4d4753505a404b4c4f4c445a0d404c4e0d4256" class="btn btn-primary">Email Me</a>
+                <a href="mailto:contact@westmindpsychology.com.au" class="btn btn-primary">Email Me</a>
                 <a href="https://calendly.com/contact-westmindpsychology/30min" class="btn btn-primary" target="_blank">Book Free Consult</a>
             </div>
             
@@ -1672,7 +1775,7 @@
                         </svg>
                         <span>Email</span>
                     </h3>
-                    <a href="/cdn-cgi/l/email-protection#84e7ebeaf0e5e7f0c4f3e1f7f0e9edeae0f4f7fde7ecebe8ebe3fdaae7ebe9aae5f1"><span class="__cf_email__" data-cfemail="c7a4a8a9b3a6a4b387b0a2b4b3aaaea9a3b7b4bea4afa8aba8a0bee9a4a8aae9a6b2">[email&#160;protected]</span></a>
+                    <a href="mailto:contact@westmindpsychology.com.au">contact@westmindpsychology.com.au</a>
                 </div>
                 
                 <div class="contact-item">
@@ -1683,7 +1786,7 @@
                         </svg>
                         <span>Location</span>
                     </h3>
-                    <p>Perth, Western Australia</p>
+                    <p>Alfred Cove, Western Australia</p>
                 </div>
                 
                 <div class="contact-item">
@@ -1703,7 +1806,7 @@
                         </svg>
                         <span>Hours</span>
                     </h3>
-                    <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                    <p>Wednesday: 9:00 AM – 6:00 PM</p>
                 </div>
             </div>
         </div>
@@ -1712,7 +1815,7 @@
     </main>
 
     <footer role="contentinfo">
-        <p>&copy; 2026 Westmind Psychology & Counselling. All rights reserved. | Taine Hall, Professional Psychologist</p>
+        <p>&copy; 2026 Westmind Psychology & Counselling. All rights reserved. | Taine Hall, Registered Psychologist</p>
     </footer>
 
     <!-- Calendly badge widget begin -->
