@@ -403,13 +403,18 @@
         .hero-background::before {
             content: '';
             position: absolute;
-            inset: -18px;
+            inset: -34px;
             background-image: url('hero-painting-background.jpg');
             background-size: cover;
-            background-position: center 52%;
-            filter: blur(4px);
-            transform: scale(1.03);
-            opacity: 0.92;
+            background-position: 50% 52%;
+            filter: blur(4px) saturate(1.12) contrast(1.06) brightness(1.02);
+            transform: scale(1.05) translate3d(0, 0, 0);
+            transform-origin: center;
+            opacity: 0.94;
+            animation:
+                paintingDrift 24s ease-in-out infinite alternate,
+                paintingPulse 11s ease-in-out infinite;
+            will-change: transform, filter, opacity, background-position;
         }
 
         .hero-background::after {
@@ -417,9 +422,59 @@
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(90deg, rgba(246, 241, 232, 0.88) 0%, rgba(246, 241, 232, 0.62) 42%, rgba(246, 241, 232, 0.28) 100%),
-                radial-gradient(circle at 18% 35%, rgba(255, 255, 255, 0.44), transparent 36%),
-                radial-gradient(circle at 82% 22%, rgba(95, 111, 88, 0.14), transparent 42%);
+                linear-gradient(90deg, rgba(246, 241, 232, 0.86) 0%, rgba(246, 241, 232, 0.58) 42%, rgba(246, 241, 232, 0.22) 100%),
+                radial-gradient(circle at 18% 35%, rgba(255, 255, 255, 0.42), transparent 36%),
+                radial-gradient(circle at 78% 24%, rgba(199, 125, 92, 0.16), transparent 34%),
+                radial-gradient(circle at 86% 72%, rgba(95, 111, 88, 0.18), transparent 40%);
+            background-size: 100% 100%, 125% 125%, 140% 140%, 160% 160%;
+            background-position: center, 0% 42%, 92% 18%, 88% 84%;
+            animation: paintingLightSweep 18s ease-in-out infinite alternate;
+            will-change: background-position, opacity;
+        }
+
+        @keyframes paintingDrift {
+            0% {
+                background-position: 46% 50%;
+                transform: scale(1.05) translate3d(-1.6%, -1.2%, 0);
+            }
+            35% {
+                background-position: 52% 48%;
+                transform: scale(1.08) translate3d(1.4%, -0.5%, 0);
+            }
+            70% {
+                background-position: 50% 56%;
+                transform: scale(1.06) translate3d(-0.4%, 1.1%, 0);
+            }
+            100% {
+                background-position: 54% 52%;
+                transform: scale(1.09) translate3d(1.6%, 1%, 0);
+            }
+        }
+
+        @keyframes paintingPulse {
+            0%, 100% {
+                filter: blur(4px) saturate(1.12) contrast(1.06) brightness(1.02);
+                opacity: 0.94;
+            }
+            50% {
+                filter: blur(3px) saturate(1.28) contrast(1.12) brightness(1.08);
+                opacity: 0.99;
+            }
+        }
+
+        @keyframes paintingLightSweep {
+            0% {
+                opacity: 0.86;
+                background-position: center, 0% 42%, 92% 18%, 88% 84%;
+            }
+            50% {
+                opacity: 0.74;
+                background-position: center, 18% 28%, 76% 28%, 70% 72%;
+            }
+            100% {
+                opacity: 0.82;
+                background-position: center, 8% 48%, 88% 18%, 94% 62%;
+            }
         }
 
         .hero-content-wrapper {
@@ -1478,6 +1533,11 @@
                 transition-duration: 0.001ms !important;
             }
 
+            .hero-background::before,
+            .hero-background::after {
+                animation: none !important;
+                will-change: auto;
+            }
         }
     </style>
 </head>
