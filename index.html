@@ -250,7 +250,7 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.85rem;
             text-decoration: none;
             transition: transform 0.3s ease;
             flex-shrink: 0;
@@ -260,15 +260,21 @@
             transform: scale(1.02);
         }
 
-        .brain-logo {
-            width: 70px;
-            height: 70px;
+        .brand-mark {
+            width: 58px;
+            height: 58px;
+            display: block;
+            flex: 0 0 auto;
+            object-fit: contain;
+            border-radius: 14px;
+            box-shadow: 0 8px 18px rgba(93, 75, 63, 0.12);
         }
 
         .logo-text-container {
             display: flex;
             flex-direction: column;
-            gap: 0.1rem;
+            justify-content: center;
+            gap: 0.15rem;
         }
 
         .logo-text {
@@ -1226,9 +1232,10 @@
                 font-size: 2rem;
             }
 
-            .brain-logo {
-                width: 55px;
-                height: 55px;
+            .brand-mark {
+                width: 50px;
+                height: 50px;
+                border-radius: 12px;
             }
 
             .logo-subtitle {
@@ -1248,9 +1255,28 @@
                 justify-content: space-between;
             }
 
+            .logo {
+                gap: 0.7rem;
+            }
+
+            .brand-mark {
+                width: 48px;
+                height: 48px;
+                border-radius: 12px;
+            }
+
+            .logo-text {
+                font-size: 1.9rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.78rem;
+                letter-spacing: 0.08em;
+            }
+
             .nav-links {
                 position: fixed;
-                top: 90px;
+                top: 96px;
                 left: 0;
                 right: 0;
                 background: white;
@@ -1379,9 +1405,14 @@
                 font-size: 0.7rem;
             }
 
-            .brain-logo {
-                width: 45px;
-                height: 45px;
+            .brand-mark {
+                width: 42px;
+                height: 42px;
+                border-radius: 10px;
+            }
+
+            .nav-links {
+                top: 90px;
             }
 
             .hero-content h1 {
@@ -1442,34 +1473,7 @@
     <header role="banner">
         <nav aria-label="Main navigation">
             <a href="#" class="logo">
-                <svg class="brain-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Brain outline representing "free mind" -->
-                    <g fill="none" stroke="#C77D5C" stroke-width="4">
-                        <!-- Left hemisphere -->
-                        <path d="M 60 100 Q 40 80 45 60 Q 50 40 70 35 Q 90 30 100 40 Q 105 35 110 35" stroke-linecap="round"/>
-                        <path d="M 60 100 Q 45 110 50 130 Q 55 145 70 150 Q 85 155 100 145" stroke-linecap="round"/>
-                        
-                        <!-- Right hemisphere -->
-                        <path d="M 140 100 Q 160 80 155 60 Q 150 40 130 35 Q 110 30 100 40" stroke-linecap="round"/>
-                        <path d="M 140 100 Q 155 110 150 130 Q 145 145 130 150 Q 115 155 100 145" stroke-linecap="round"/>
-                        
-                        <!-- Brain folds/details -->
-                        <path d="M 75 60 Q 80 70 85 65" stroke-linecap="round" stroke-width="2.5"/>
-                        <path d="M 70 85 Q 75 95 80 90" stroke-linecap="round" stroke-width="2.5"/>
-                        <path d="M 75 110 Q 82 120 87 115" stroke-linecap="round" stroke-width="2.5"/>
-                        
-                        <path d="M 125 60 Q 120 70 115 65" stroke-linecap="round" stroke-width="2.5"/>
-                        <path d="M 130 85 Q 125 95 120 90" stroke-linecap="round" stroke-width="2.5"/>
-                        <path d="M 125 110 Q 118 120 113 115" stroke-linecap="round" stroke-width="2.5"/>
-                    </g>
-                    
-                    <!-- "Free" element - flying birds -->
-                    <g fill="#C77D5C" opacity="0.7">
-                        <path d="M 90 20 Q 85 18 80 20 Q 85 22 90 20 Z"/>
-                        <path d="M 110 15 Q 105 13 100 15 Q 105 17 110 15 Z"/>
-                        <path d="M 120 25 Q 115 23 110 25 Q 115 27 120 25 Z"/>
-                    </g>
-                </svg>
+                <img class="brand-mark" src="favicon.png" alt="" width="512" height="512" aria-hidden="true">
                 <div class="logo-text-container">
                     <span class="logo-text">Westmind</span>
                     <span class="logo-subtitle">Psychology</span>
