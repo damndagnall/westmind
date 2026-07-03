@@ -10,12 +10,17 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://westmindpsychology.com.au">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <meta name="theme-color" content="#F5F1E8">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://westmindpsychology.com.au">
     <meta property="og:title" content="Westmind Psychology | Psychologist in Alfred Cove | Taine Hall">
     <meta property="og:description" content="Compassionate, evidence-based therapy in Alfred Cove, WA. Taine Hall specialises in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available.">
+    <meta property="og:image" content="https://westmindpsychology.com.au/taine-hall.jpg">
+    <meta property="og:image:alt" content="Taine Hall, Registered Psychologist at Westmind Psychology">
     <meta property="og:site_name" content="Westmind Psychology">
     <meta property="og:locale" content="en_AU">
     
@@ -23,6 +28,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Westmind Psychology | Psychologist in Alfred Cove | Taine Hall">
     <meta name="twitter:description" content="Compassionate, evidence-based therapy in Alfred Cove, WA. Specialising in anxiety, depression, addiction recovery, and relational challenges. Medicare rebates available.">
+    <meta name="twitter:image" content="https://westmindpsychology.com.au/taine-hall.jpg">
+    <meta name="twitter:image:alt" content="Taine Hall, Registered Psychologist at Westmind Psychology">
 
     <!-- Geo tags for local SEO -->
     <meta name="geo.region" content="AU-WA">
@@ -38,7 +45,7 @@
         "name": "Westmind Psychology",
         "description": "Compassionate, evidence-based psychology and counselling services in Alfred Cove, Western Australia. Specialising in anxiety, depression, addiction recovery, and relational challenges.",
         "url": "https://westmindpsychology.com.au",
-        "telephone": "",
+        "image": "https://westmindpsychology.com.au/taine-hall.jpg",
         "email": "contact@westmindpsychology.com.au",
         "address": {
             "@type": "PostalAddress",
@@ -141,7 +148,7 @@
                 "name": "Does Westmind Psychology accept Medicare?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. With a Mental Health Treatment Plan from your GP, you can claim a Medicare rebate of $98.95 per session. Up to 10 rebated sessions are available per calendar year."
+                    "text": "Yes. With a Mental Health Treatment Plan from your GP, eligible clients can claim a Medicare rebate of $101.55 for item 80110 sessions. Up to 10 rebated individual sessions are available per calendar year."
                 }
             },
             {
@@ -450,8 +457,18 @@
             font-weight: 600;
             font-size: 0.95rem;
             transition: all 0.3s ease;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55rem;
+            min-height: 3.25rem;
             border: 2px solid transparent;
+        }
+
+        .btn svg {
+            width: 1rem;
+            height: 1rem;
+            flex: 0 0 auto;
         }
 
         .btn-primary {
@@ -477,6 +494,12 @@
             transform: translateY(-2px);
         }
 
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #5F6F58;
+            outline-offset: 4px;
+        }
+
         /* Services Section */
         .services {
             background: var(--off-white);
@@ -498,8 +521,10 @@
 
         .services-grid-container {
             padding: 1rem 0;
+            margin: 0 4.75rem;
             overflow-x: auto;
             scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
             scrollbar-width: none;
             -ms-overflow-style: none;
             -webkit-overflow-scrolling: touch;
@@ -696,7 +721,7 @@
 
         /* Conditions Section */
         .conditions {
-            padding: 6rem 2rem;
+            padding: 6rem 2rem 4rem;
             background: var(--cream);
         }
 
@@ -722,7 +747,7 @@
             gap: 0.875rem;
             transition: all 0.3s ease;
             position: relative;
-            cursor: default;
+            cursor: pointer;
         }
 
         .condition-tag:hover {
@@ -806,7 +831,8 @@
             font-style: italic;
         }
 
-        .condition-tag:hover .condition-tooltip {
+        .condition-tag:hover .condition-tooltip,
+        .condition-tag.active .condition-tooltip {
             opacity: 1;
             transform: translateX(-50%) translateY(0);
         }
@@ -823,7 +849,8 @@
             border-top-color: transparent;
             border-bottom-color: #2C2C2C;
         }
-        .condition-tag.tooltip-below:hover .condition-tooltip {
+        .condition-tag.tooltip-below:hover .condition-tooltip,
+        .condition-tag.tooltip-below.active .condition-tooltip {
             transform: translateX(-50%) translateY(0);
         }
 
@@ -838,7 +865,9 @@
             left: 24px;
         }
         .condition-tag:first-child:hover .condition-tooltip,
-        .condition-tag:nth-child(4):hover .condition-tooltip {
+        .condition-tag:first-child.active .condition-tooltip,
+        .condition-tag:nth-child(4):hover .condition-tooltip,
+        .condition-tag:nth-child(4).active .condition-tooltip {
             transform: translateX(0) translateY(0);
         }
 
@@ -854,13 +883,15 @@
             right: 24px;
         }
         .condition-tag:nth-child(3):hover .condition-tooltip,
-        .condition-tag:nth-child(7):hover .condition-tooltip {
+        .condition-tag:nth-child(3).active .condition-tooltip,
+        .condition-tag:nth-child(7):hover .condition-tooltip,
+        .condition-tag:nth-child(7).active .condition-tooltip {
             transform: translateX(0) translateY(0);
         }
 
         /* About Section */
         .about {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem 6rem;
             background: var(--cream);
             animation: fadeInUp 0.8s ease-out 0.6s both;
         }
@@ -871,7 +902,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
         }
 
         .about-image {
@@ -893,6 +924,8 @@
 
         .about-image img {
             width: 100%;
+            height: auto;
+            display: block;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
         }
@@ -926,14 +959,6 @@
             font-weight: 500;
             color: #5F6F58;
             border: 1px solid #8B9D83;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: #C77D5C;
-            color: white;
-            padding: 6rem 2rem;
-            animation: fadeInUp 0.8s ease-out 0.8s both;
         }
 
         /* Booking Section */
@@ -1000,6 +1025,58 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.08);
             min-height: 700px;
+        }
+
+        /* Practice Information */
+        .practice-info {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .practice-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: var(--off-white);
+            border: 1px solid rgba(199, 125, 92, 0.16);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .info-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: #5F6F58;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p {
+            color: var(--charcoal);
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .info-card a {
+            color: #5F6F58;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #C77D5C;
+            color: white;
+            padding: 6rem 2rem;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
         }
 
         .calendly-placeholder {
@@ -1188,7 +1265,7 @@
             }
 
             .nav-links.active {
-                max-height: 400px;
+                max-height: 560px;
             }
 
             .nav-links li {
@@ -1251,6 +1328,10 @@
                 text-align: center;
             }
 
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
             .about-image {
                 order: -1;
             }
@@ -1265,7 +1346,8 @@
             }
 
             .booking-calendar {
-                padding: 2rem;
+                padding: 1rem;
+                min-height: 560px;
             }
 
             .service-card {
@@ -1274,7 +1356,15 @@
                 padding: 2rem;
             }
 
+            .services-grid-container {
+                margin: 0;
+            }
+
             .scroll-arrow {
+                display: none;
+            }
+
+            .cliniko-badge {
                 display: none;
             }
         }
@@ -1306,11 +1396,45 @@
                 min-width: 260px;
                 max-width: 260px;
             }
+
+            .btn {
+                padding: 0.95rem 1.35rem;
+                gap: 0.45rem;
+                font-size: 0.92rem;
+            }
+
+            .cta-buttons .btn {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .practice-info,
+            .booking,
+            .contact {
+                padding: 4rem 1rem;
+            }
         }
 
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 110px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.001ms !important;
+            }
+
+            .hero-background svg animate,
+            .hero-background svg animateTransform {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -1352,19 +1476,20 @@
                 </div>
             </a>
             
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="main-navigation-links" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             
-            <ul class="nav-links">
+            <ul id="main-navigation-links" class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#conditions">Conditions</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#booking">Book Now</a></li>
+                <li><a href="#info">Info</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://westmind-psychology.au5.cliniko.com/bookings?business_id=1892032029415976388&practitioner_id=1892032027167829960" class="btn-consult" target="_blank">Book Free 15-min Consult</a></li>
+                <li><a href="https://westmind-psychology.au5.cliniko.com/bookings?business_id=1892032029415976388&practitioner_id=1892032027167829960" class="btn-consult" target="_blank" rel="noopener">Book Free 15-min Consult</a></li>
             </ul>
         </nav>
     </header>
@@ -1589,8 +1714,14 @@
                 <h1>A Thoughtful Space for Growth</h1>
                 <p>Building meaningful change through a secure therapeutic relationship. Explore the deeper patterns shaping your life, and discover new ways of experiencing yourself, your relationships, and the world around you.</p>
                 <div class="cta-buttons">
-                    <a href="#booking" class="btn btn-primary">Book an Appointment</a>
-                    <a href="#services" class="btn btn-secondary">Learn More</a>
+                    <a href="#booking" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <span>Book an Appointment</span>
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+                        <span>Learn More</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1727,7 +1858,7 @@
             <p class="section-subtitle">I support adults navigating a wide range of psychological and emotional difficulties</p>
 
             <div class="conditions-grid">
-                <div class="condition-tag">
+                <div class="condition-tag" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>Anxiety &amp; Depression</span>
                     <div class="condition-tooltip">
@@ -1736,7 +1867,7 @@
                         <div class="condition-tooltip-approaches">CBT · Mindfulness · Behavioural Activation · Schema Therapy</div>
                     </div>
                 </div>
-                <div class="condition-tag">
+                <div class="condition-tag" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>Interpersonal Difficulties</span>
                     <div class="condition-tooltip">
@@ -1745,7 +1876,7 @@
                         <div class="condition-tooltip-approaches">Attachment-focused · Psychodynamic · Schema Therapy · Narrative Therapy</div>
                     </div>
                 </div>
-                <div class="condition-tag">
+                <div class="condition-tag" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>Complex Trauma &amp; PTSD</span>
                     <div class="condition-tooltip">
@@ -1754,7 +1885,7 @@
                         <div class="condition-tooltip-approaches">Trauma-informed · Somatic awareness · DBT · Psychodynamic</div>
                     </div>
                 </div>
-                <div class="condition-tag">
+                <div class="condition-tag" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>Personality Disorders</span>
                     <div class="condition-tooltip">
@@ -1763,7 +1894,7 @@
                         <div class="condition-tooltip-approaches">DBT · Schema Therapy · Psychodynamic · Depth-oriented work</div>
                     </div>
                 </div>
-                <div class="condition-tag">
+                <div class="condition-tag" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>Identity, Gender &amp; Sexual Diversity</span>
                     <div class="condition-tooltip">
@@ -1772,7 +1903,7 @@
                         <div class="condition-tooltip-approaches">Narrative Therapy · Psychodynamic · Affirming practice</div>
                     </div>
                 </div>
-                <div class="condition-tag">
+                <div class="condition-tag" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>Emotion Dysregulation</span>
                     <div class="condition-tooltip">
@@ -1781,7 +1912,7 @@
                         <div class="condition-tooltip-approaches">DBT · Mindfulness · Distress tolerance skills</div>
                     </div>
                 </div>
-                <div class="condition-tag">
+                <div class="condition-tag" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>OCD</span>
                     <div class="condition-tooltip">
@@ -1790,7 +1921,7 @@
                         <div class="condition-tooltip-approaches">ERP (Exposure & Response Prevention) · ACT · CBT</div>
                     </div>
                 </div>
-                <div class="condition-tag featured">
+                <div class="condition-tag featured" tabindex="0" role="button" aria-expanded="false">
                     <div class="condition-dot"></div>
                     <span>Adult ADHD Assessments</span>
                     <div class="condition-tooltip">
@@ -1806,7 +1937,7 @@
     <section id="about" class="about" aria-label="About Taine Hall">
         <div class="about-container">
             <div class="about-image">
-                <img src="taine-hall.jpg" alt="Taine Hall - Registered Psychologist at Westmind Psychology in Alfred Cove, Western Australia" loading="lazy" width="600" height="600">
+                <img src="taine-hall.jpg" alt="Taine Hall - Registered Psychologist at Westmind Psychology in Alfred Cove, Western Australia" loading="lazy" width="980" height="1307">
             </div>
             <div class="about-content">
                 <h2>Meet Taine Hall</h2>
@@ -1892,15 +2023,16 @@
                             </svg>
                         </div>
                         <h3>Medicare Rebates</h3>
-                        <p>With a Mental Health Treatment Plan from your GP, you can claim a Medicare rebate of $98.95 per session. Up to 10 rebated sessions available per calendar year.</p>
+                        <p>With a Mental Health Treatment Plan from your GP, eligible clients can claim a Medicare rebate of $101.55 for item 80110 sessions. Up to 10 rebated individual sessions available per calendar year.</p>
                     </div>
                 </div>
                 
                 <div class="booking-calendar">
-                    <iframe id='cliniko-55295056' src='https://westmind-psychology.au5.cliniko.com/bookings?business_id=1892032029415976388&practitioner_id=1892032027167829960&embedded=true' frameborder='0' scrolling='auto' width='100%' height='1000' style='pointer-events: auto; border: none; border-radius: 12px;'></iframe>
+                    <iframe id='cliniko-55295056' title='Westmind Psychology online booking calendar' src='https://westmind-psychology.au5.cliniko.com/bookings?business_id=1892032029415976388&practitioner_id=1892032027167829960&embedded=true' frameborder='0' scrolling='auto' width='100%' height='1000' style='pointer-events: auto; border: none; border-radius: 12px;'></iframe>
                     <script type='text/javascript'>
                       window.addEventListener('message', function handleIFrameMessage (e) {
                         var clinikoBookings = document.getElementById('cliniko-55295056');
+                        if (e.origin !== 'https://westmind-psychology.au5.cliniko.com') return;
                         if (typeof e.data !== 'string') return;
                         if (e.data.search('cliniko-bookings-resize') > -1) {
                           var height = Number(e.data.split(':')[1]);
@@ -1914,14 +2046,59 @@
         </div>
     </section>
 
+    <section id="info" class="practice-info" aria-label="Helpful Information">
+        <div class="practice-info-container">
+            <h2 class="section-title">Helpful Information</h2>
+            <p class="section-subtitle">Practical details for starting therapy with Westmind Psychology</p>
+
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>Does Westmind Psychology accept Medicare?</h3>
+                    <p>Yes. With a Mental Health Treatment Plan from your GP, eligible clients can claim a Medicare rebate of $101.55 for item 80110 sessions. Up to 10 rebated individual sessions are available per calendar year.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Does Westmind Psychology offer telehealth sessions?</h3>
+                    <p>Yes. Secure video therapy sessions are available for clients throughout Western Australia, providing the same thoughtful therapeutic space from the comfort of your home.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>What therapy approaches does Taine Hall use?</h3>
+                    <p>Taine integrates psychodynamic and attachment-based therapy with evidence-based modalities including CBT, DBT, Schema Therapy, Narrative Therapy, and Mindfulness practices, tailored to each client's needs.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Crisis Support</h3>
+                    <p>Westmind Psychology is not a crisis service. If you are in immediate danger, call <a href="tel:000">000</a>. For 24/7 crisis support in Australia, call Lifeline on <a href="tel:131114">13 11 14</a>.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Fees & Cancellations</h3>
+                    <p>Session fees, Medicare eligibility, private health options, and cancellation terms can be confirmed before your first appointment or during the booking process.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Privacy & Confidentiality</h3>
+                    <p>Your personal information is handled confidentially and used only for appropriate clinical and administrative purposes. Limits to confidentiality can be discussed before therapy begins.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact" aria-label="Contact Westmind Psychology">
         <div class="contact-container">
             <h2>Begin Your Therapeutic Journey</h2>
             <p>Reaching out is a courageous first step. I'm here to provide a secure and reflective space where you can explore, understand, and grow.</p>
             
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
-                <a href="/cdn-cgi/l/email-protection#e88b87869c898b9ca89f8d9b9c8581868c989b918b808784878f91c68b8785c6899d" class="btn btn-primary">Email Me</a>
-                <a href="https://westmind-psychology.au5.cliniko.com/bookings?business_id=1892032029415976388&practitioner_id=1892032027167829960" class="btn btn-primary" target="_blank">Book Free Consult</a>
+                <a href="mailto:contact@westmindpsychology.com.au" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+                    <span>Email Me</span>
+                </a>
+                <a href="https://westmind-psychology.au5.cliniko.com/bookings?business_id=1892032029415976388&practitioner_id=1892032027167829960" class="btn btn-primary" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Book Free Consult</span>
+                </a>
             </div>
             
             <div class="contact-info">
@@ -1983,6 +2160,12 @@
             bottom: 24px;
             right: 24px;
             z-index: 9999;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .cliniko-badge.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
         }
         .cliniko-badge a {
             display: inline-flex;
@@ -2048,16 +2231,95 @@
                 updateArrows();
             }
 
+            // Keep the floating booking button out of booking/contact content.
+            const bookingBadge = document.querySelector('.cliniko-badge');
+            const badgeHideSections = document.querySelectorAll('#booking, #contact');
+            if (bookingBadge && 'IntersectionObserver' in window && badgeHideSections.length > 0) {
+                const visibleSections = new Set();
+                const badgeObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            visibleSections.add(entry.target.id);
+                        } else {
+                            visibleSections.delete(entry.target.id);
+                        }
+                    });
+                    bookingBadge.classList.toggle('is-hidden', visibleSections.size > 0);
+                }, { threshold: 0.15 });
+
+                badgeHideSections.forEach(section => badgeObserver.observe(section));
+            }
+
+            // Toggle condition detail cards for touch and keyboard users.
+            const conditionTags = document.querySelectorAll('.condition-tag');
+            function closeAllConditionTags() {
+                conditionTags.forEach(tag => {
+                    tag.classList.remove('active');
+                    tag.setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            conditionTags.forEach(tag => {
+                function toggleTag() {
+                    const willOpen = !tag.classList.contains('active');
+                    closeAllConditionTags();
+                    tag.classList.toggle('active', willOpen);
+                    tag.setAttribute('aria-expanded', String(willOpen));
+                }
+
+                tag.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    toggleTag();
+                });
+
+                tag.addEventListener('blur', function() {
+                    tag.classList.remove('active');
+                    tag.setAttribute('aria-expanded', 'false');
+                });
+
+                tag.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        toggleTag();
+                    }
+
+                    if (event.key === 'Escape') {
+                        closeAllConditionTags();
+                        tag.blur();
+                    }
+                });
+            });
+
+            document.addEventListener('click', function() {
+                closeAllConditionTags();
+                if (document.activeElement && document.activeElement.classList.contains('condition-tag')) {
+                    document.activeElement.blur();
+                }
+            });
+
             // Mobile menu toggle
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
 
             if (mobileMenuToggle && navLinks) {
                 mobileMenuToggle.addEventListener('click', function() {
-                    mobileMenuToggle.classList.toggle('active');
-                    navLinks.classList.toggle('active');
+                    const isOpen = mobileMenuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active', isOpen);
+                    mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
                 });
 
                 // Close menu when clicking a link
                 const navLinkItems = navLinks.querySelectorAll('a');
-               
+                navLinkItems.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
